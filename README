@@ -1,8 +1,62 @@
+[English](##Introduction) | [中文](#项目简介)
+
+# libvtuzkicc
+
+## Introduction
+
+libvtuzkicc is a general-purpose data structure library implemented in C that provides various data structure implementations including arrays, linked lists, stacks, queues, pools, etc., with support for both static and dynamic initialization.
+
+## Features
+
+- Array (cc_array): A basic array structure for storing fixed-size elements.
+- Stack (cc_stack): Provides both array-based and linked list-based stack implementations: cc_array_stack and cc_list_stack.
+- Queue (cc_queue): Includes array-based queue cc_array_queue, linked list-based queue cc_list_queue, and circular queue cc_array_ring_queue.
+- Pool (cc_pool): Implementation of object pools for efficient management and reuse of objects, reducing memory allocation and deallocation overhead.
+- Linked List (cc_list): Implementation of double-linked lists, supporting insertion, deletion, and search operations. Also provides linked lists with object pools cc_list_with_pool for more efficient management of list nodes.
+
+## Installation
+
+### Prerequisites
+
+- C/C++ compiler (e.g., GCC, Clang)
+
+### Build and Install
+
+"make help" can be used to view help information.
+
+## Usage
+
+Please refer to the files in the test directory for usage examples.
+
+## Documentation
+
+Not available yet.
+
+## Contributing
+
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+Author - VT-Tuzki
+
+Project Link: [https://github.com/VT-Tuzki/libvtuzkicc](https://github.com/VT-Tuzki/libvtuzkicc)
+
+---
+
 # libvtuzkicc
 
 ## 项目简介
 
-libvtuzkicc 是一个用 C 语言实现的通用数据结构库，提供了多种数据结构的实现, 包括数组、链表、栈、队列、池等，并且支持静态和动态初始化.
+libvtuzkicc 是一个用 C 语言实现的通用数据结构库，提供了多种数据结构的实现，包括数组、链表、栈、队列、池等，并且支持静态和动态初始化。
 
 ## 特性
 
@@ -20,14 +74,7 @@ libvtuzkicc 是一个用 C 语言实现的通用数据结构库，提供了多�
 
 ### 编译安装
 
-```bash
-git clone https://github.com/[用户名]/libvtuzkicc.git
-cd libvtuzkicc
-mkdir build && cd build
-cmake ..
-make
-make install
-```
+"make help" 可以查看帮助信息
 
 ## 使用方法
 
@@ -36,6 +83,7 @@ make install
 ## 文档
 
 暂无
+
 ## 贡献指南
 
 1. Fork 本仓库
@@ -46,10 +94,10 @@ make install
 
 ## 许可证
 
-本项目采用 [MIT License] 许可证 - 详见 [LICENSE](LICENSE) 文件
+本项目采用 MIT License 许可证 - 详见 [LICENSE](LICENSE) 文件
 
 ## 联系方式
 
 作者名称 - VT-Tuzki
 
-项目链接: [https://github.com/[用户名]/libvtuzkicc](https://github.com/[用户名]/libvtuzkicc)
+项目链接: [https://github.com/VT-Tuzki/libvtuzkicc](https://github.com/VT-Tuzki/libvtuzkicc)
