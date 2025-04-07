@@ -1,8 +1,8 @@
 #ifndef __CC_LIST_POOL_H__
 #define __CC_LIST_POOL_H__
 
-#include "cc_list.h"
-#include "cc_pool.h"
+#include "ds/list/cc_list.h"
+#include "ds/pool/cc_pool.h"
 
 typedef struct cc_list_node_pool {
     cc_pool_t pool;

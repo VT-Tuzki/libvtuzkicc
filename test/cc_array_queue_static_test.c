@@ -1,4 +1,4 @@
-#include "cc_array_queue.h"
+#include "ds/queue/cc_array_queue.h"
 #include "ds/stack/cc_list_stack.h"
 #include "core/cc_common.h"
 #include <assert.h>

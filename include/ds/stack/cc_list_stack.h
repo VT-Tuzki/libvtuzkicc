@@ -1,7 +1,7 @@
 #ifndef __CC_LIST_STACK_H__
 #define __CC_LIST_STACK_H__
 
-#include "cc_stack.h"
+#include "ds/stack/cc_stack.h"
 #include "../list/cc_list.h"
 
 typedef enum {

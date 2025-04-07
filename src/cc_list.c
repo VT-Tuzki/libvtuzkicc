@@ -1,12 +1,12 @@
 
 #include <string.h>
 
-#include "cc_stdint.h"
-#include "cc_common.h"
-#include "cc_mem.h"
-#include "cc_dbg.h"
+#include "core/cc_stdint.h"
+#include "core/cc_common.h"
+#include "core/cc_mem.h"
+#include "core/cc_dbg.h"
 
-#include "cc_list.h"
+#include "ds/list/cc_list.h"
 
 int cc_list_node_insert_before(cc_list_node_t *self, void *data)
 {

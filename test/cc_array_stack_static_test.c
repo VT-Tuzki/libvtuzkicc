@@ -3,7 +3,7 @@
 #include "core/cc_mem.h"
 #include "ds/array/cc_array.h"
 #include "ds/stack/cc_stack.h"
-#include "cc_array_stack.h"
+#include "ds/stack/cc_array_stack.h"
 
 
 #include <assert.h>

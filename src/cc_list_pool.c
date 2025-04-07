@@ -1,11 +1,11 @@
 #include <string.h>
 
-#include "cc_stdint.h"
-#include "cc_common.h"
-#include "cc_mem.h"
-#include "cc_dbg.h"
+#include "core/cc_stdint.h"
+#include "core/cc_common.h"
+#include "core/cc_mem.h"
+#include "core/cc_dbg.h"
 
-#include "cc_list_pool.h"
+#include "ds/list/cc_list_pool.h"
 
 int cc_list_node_pool_init(cc_list_node_pool_t *node_pool, cc_size_t capacity)
 {

@@ -1,7 +1,7 @@
 #ifndef __CC_ARRAY_STACK_H
 #define __CC_ARRAY_STACK_H
 
-#include "cc_stack.h"
+#include "ds/stack/cc_stack.h"
 
 #include "../array/cc_array.h"
 

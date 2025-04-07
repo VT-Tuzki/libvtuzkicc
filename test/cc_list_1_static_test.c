@@ -1,9 +1,9 @@
 #include <assert.h>
 #include <stdlib.h>
 #include <string.h>
-#include "cc_common.h"
-#include "cc_list_sort.h"
-#include "cc_stdint.h"
+#include "core/cc_common.h"
+#include "ds/list/cc_list_sort.h"
+#include "core/cc_stdint.h"
 #include "ds/array/cc_array.h"
 #include "ds/list/cc_list.h"
 

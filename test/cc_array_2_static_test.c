@@ -1,5 +1,5 @@
 #include "ds/array/cc_array.h"
-#include "cc_array_sort.h"
+#include "ds/array/cc_array_sort.h"
 #include <assert.h>
 #include <math.h>
 #include <stdio.h>

@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "cc_common.h"
-#include "cc_stdint.h"
-#include "cc_list.h"
-#include "cc_list_pool.h"
-#include "cc_dbg.h"
-#include "cc_run_time.h"
-#include "cc_mem.h"
+#include "core/cc_common.h"
+#include "core/cc_stdint.h"
+#include "ds/list/cc_list.h"
+#include "ds/list/cc_list_pool.h"
+#include "core/cc_dbg.h"
+#include "core/cc_run_time.h"
+#include "core/cc_mem.h"
 
 /* Test data structure, similar to cc_list_1_static_test.c */
 struct test_data {

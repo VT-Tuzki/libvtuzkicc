@@ -1,6 +1,6 @@
 
-#include "cc_common.h"
-#include "cc_pool.h"
+#include "core/cc_common.h"
+#include "ds/pool/cc_pool.h"
 #include <stdint.h>
 
 static int cc_pool_init_nodes(cc_pool_t *pool)

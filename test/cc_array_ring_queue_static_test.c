@@ -1,5 +1,5 @@
 #include "ds/array/cc_array.h"
-#include "cc_array_ring_queue.h"
+#include "ds/ring_queue/cc_array_ring_queue.h"
 #include <assert.h>
 
 #include "core/cc_dbg.h"

@@ -1,11 +1,11 @@
 // cc_pool_1_static_test.c
-#include "cc_pool.h"
+#include "ds/pool/cc_pool.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <assert.h>
-#include "cc_dbg.h"
-#include "cc_stdint.h"
+#include "core/cc_dbg.h"
+#include "core/cc_stdint.h"
 // 测试结构体定义
 typedef struct {
     char name[32];
