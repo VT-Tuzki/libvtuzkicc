@@ -23,7 +23,7 @@ void* realloc(void* ptr, size_t new_size);
 #endif  // CC_USE_CUSTOM_ALLOCATOR
 
 
-static int adapter_free(void *obj) {
+static inline int adapter_free(void *obj) {
     free(obj);
     return ERR_CC_COMMON_OK;
 }

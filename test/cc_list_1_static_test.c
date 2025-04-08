@@ -127,6 +127,7 @@ int get_array(cc_array_t **self, char *str)
     cc_array_t *tmp = NULL;
     test_data_t *temp_data = NULL;
     res = cc_array_new(&tmp, ARRAY_LEN, sizeof(test_data_t *), (cc_delete_fn_t)free_test_data_wrapper);
+    if(res != ERR_CC_COMMON_OK) goto error;
     for(int i = 0; i < ARRAY_LEN; i++) {
         temp_data = malloc(sizeof(*temp_data));
         check(temp_data,"malloc temp_data error\n");
@@ -141,10 +142,10 @@ int get_array(cc_array_t **self, char *str)
     *self = tmp;
     return ERR_CC_COMMON_OK;
 
-fail2:
-    cc_array_delete(tmp);
-fail1:
-    return res;
+// fail2:
+//     cc_array_delete(tmp);
+// fail1:
+//     return res;
 error:
     exit(1);
 }
@@ -345,14 +346,14 @@ error:
     exit(1);
 }
 
-static int get_list_array_data_struct_str(cc_list_node_t *list_node, void **result)
-{
-    cc_array_t *old_array = list_node->data;
-    test_data_t *old_test_data = (test_data_t *)old_array->data;
-    char *old_str = old_test_data->name;
-    *result = old_str;
-    return ERR_CC_COMMON_OK;
-}
+// static int get_list_array_data_struct_str(cc_list_node_t *list_node, void **result)
+// {
+//     cc_array_t *old_array = list_node->data;
+//     test_data_t *old_test_data = (test_data_t *)old_array->data;
+//     char *old_str = old_test_data->name;
+//     *result = old_str;
+//     return ERR_CC_COMMON_OK;
+// }
 
 void test_copy_multiple_nodes()
 {

@@ -30,11 +30,11 @@ target_include_directories(vtuzkicc
 
 # add compiler warning flags just when building this project via
 # the BUILD_INTERFACE genex
-set(gcc_like_cxx "$<COMPILE_LANG_AND_ID:CXX,ARMClang,AppleClang,Clang,GNU,LCC>")
-set(msvc_cxx "$<COMPILE_LANG_AND_ID:CXX,MSVC>")
+set(gcc_like_c "$<COMPILE_LANG_AND_ID:C,ARMClang,AppleClang,Clang,GNU,LCC>")
+set(msvc_c "$<COMPILE_LANG_AND_ID:C,MSVC>")
 target_compile_options(compiler_flags INTERFACE
-  "$<${gcc_like_cxx}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused>>"
-  "$<${msvc_cxx}:$<BUILD_INTERFACE:-W3>>"
+  "$<${gcc_like_c}:$<BUILD_INTERFACE:-Wall;-Wextra;-Wshadow;-Wformat=2;-Wunused;-Werror>>"
+  "$<${msvc_c}:$<BUILD_INTERFACE:-W3;/WX>>"
 )
 
 if(VTUZKICC_BUILD_TESTS)

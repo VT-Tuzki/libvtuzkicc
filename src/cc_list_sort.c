@@ -21,9 +21,9 @@ static int cc_list_node_swap(cc_list_node_t *a, cc_list_node_t *b)
     return ERR_CC_COMMON_OK;
 }
 
-static int cc_list_cmp(cc_cmp_fn_t cmp, cc_list_node_t *i, cc_list_node_t *j)
+static int cc_list_cmp(cc_cmp_fn_t cc_cmp_fn, cc_list_node_t *i, cc_list_node_t *j)
 {
-    return cmp(i, j);
+    return cc_cmp_fn(i, j);
 }
 
 static int cc_list_sort_bubble_traditional(cc_list_t *self, cc_cmp_fn_t cmp)
@@ -32,7 +32,7 @@ static int cc_list_sort_bubble_traditional(cc_list_t *self, cc_cmp_fn_t cmp)
     cc_list_node_t *slow, *fast, *end;
     end = &self->root;
     slow = self->root.next;
-    int max_times = self->root.size * self->root.size;
+    // int max_times = self->root.size * self->root.size;
     while(slow != end && slow->next != end){
         fast = self->root.next;
         while(fast != end && fast->next != end) {
@@ -45,8 +45,8 @@ static int cc_list_sort_bubble_traditional(cc_list_t *self, cc_cmp_fn_t cmp)
     }
 
     return ERR_CC_COMMON_OK;
-error:
-    exit(1);
+// error:
+//     exit(1);
 }
 
 static int cc_list_sort_bubble_adaptive(cc_list_t *self, cc_cmp_fn_t cmp)
@@ -55,7 +55,7 @@ static int cc_list_sort_bubble_adaptive(cc_list_t *self, cc_cmp_fn_t cmp)
     cc_list_node_t *slow, *fast, *end;
     end = &self->root;
     slow = self->root.next;
-    int max_times = self->root.size * self->root.size;
+    // int max_times = self->root.size * self->root.size;
 
     int swapped = 0;
     while(slow != end && slow->next != end){
@@ -73,8 +73,8 @@ static int cc_list_sort_bubble_adaptive(cc_list_t *self, cc_cmp_fn_t cmp)
     }
 
     return ERR_CC_COMMON_OK;
-error:
-    exit(1);
+// error:
+//     exit(1);
 }
 
 static int cc_list_sort_bubble_get_end(cc_list_t *self, cc_cmp_fn_t cmp)
@@ -83,7 +83,7 @@ static int cc_list_sort_bubble_get_end(cc_list_t *self, cc_cmp_fn_t cmp)
     cc_list_node_t *slow, *fast, *end, *last_swap;
     end = &self->root;
     slow = self->root.next;
-    int max_times = self->root.size * self->root.size;
+    // int max_times = self->root.size * self->root.size;
 
     while(slow != &self->root && slow->next != &self->root){
         fast = self->root.next;
@@ -103,13 +103,13 @@ static int cc_list_sort_bubble_get_end(cc_list_t *self, cc_cmp_fn_t cmp)
     }
 
     return ERR_CC_COMMON_OK;
-error:
-    exit(1);
+// error:
+//     exit(1);
 }
 
-int cc_list_sort_bubble(cc_list_t *self, cc_cmp_fn_t cc_list_cmp)
+int cc_list_sort_bubble(cc_list_t *self, cc_cmp_fn_t cc_cmp_fn)
 {
-    return cc_list_sort_bubble_get_end(self, cc_list_cmp);
+    return cc_list_sort_bubble_get_end(self, cc_cmp_fn);
 }
 
 int _cc_list_sort_bubble(cc_list_t *self, cc_cmp_fn_t cmp, cc_size_t optimize)

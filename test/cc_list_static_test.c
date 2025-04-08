@@ -189,10 +189,10 @@ int main()
     assert(cc_list_new(&test_list_node_remove, adapter_free) == ERR_CC_LIST_OK);
 
     // Insert test nodes
-    for(cc_size_t i = 0; i < 5; i++) {
+    for(cc_size_t j = 0; j < 5; j++) {
         list_node_t *temp_node = malloc(sizeof(*temp_node));
         assert(temp_node != NULL);
-        temp_node->number = i;
+        temp_node->number = j;
         strcpy(temp_node->name, "test_remove");
         assert(cc_list_insert_tail(test_list_node_remove, temp_node) == ERR_CC_LIST_OK);
     }
