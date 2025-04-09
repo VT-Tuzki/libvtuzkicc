@@ -37,7 +37,7 @@ target_compile_options(compiler_flags INTERFACE
   "$<${msvc_c}:$<BUILD_INTERFACE:-W3;/WX>>"
 )
 
-if(VTUZKICC_BUILD_TESTS)
+if(VTUZKICC_BUILD_TESTS AND PROJECT_IS_TOP_LEVEL)
     enable_testing()
     add_subdirectory(test)
 endif()
